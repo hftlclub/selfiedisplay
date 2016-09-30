@@ -1,6 +1,6 @@
 'use strict';
 
-var imageApi = 'https://fotos.hftl.club/random.php';
+var imageApi = '/random.php';
 var fadeTime = 1500;
 var waitTime = 5000;
 
@@ -27,7 +27,7 @@ function process() {
     $.ajax({
         url: imageApi,
         success: function(data) {
-            nextImg.attr('src', 'https://fotos.hftl.club/' + data.path + data.file);
+            nextImg.attr('src', data.path + data.file);
             currentImg.fadeOut(fadeTime);
             nextImg.fadeIn(fadeTime);
 

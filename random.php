@@ -1,5 +1,5 @@
 <?php
-$dir = 'archiv/2016-01-20-Pinguinparty/';
+$dir = 'selfies/';
 chdir($dir);
 $images = glob('*.jpg');
 

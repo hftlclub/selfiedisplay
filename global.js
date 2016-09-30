@@ -36,17 +36,4 @@ function process() {
     });
 }
 
-function nextId() {
-    if(current < 2) current++;
-    else current = 0;
-    return 'image' + current;
-}
-
-function currentId() {
-    return 'image' + current;
-}
-
-
-
-
 

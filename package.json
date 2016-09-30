@@ -2,6 +2,10 @@
   "name": "selfiedisplay",
   "version": "1.0.0",
   "description": "Display page for selfie machine",
+  "repository": {
+    "url": "https://github.com/hftlclub/selfiedisplay",
+    "type": "git"
+  },
   "author": "Ferdinand Malcher",
   "license": "MIT",
   "dependencies": {

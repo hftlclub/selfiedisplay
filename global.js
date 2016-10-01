@@ -27,9 +27,12 @@ function process() {
     $.ajax({
         url: imageApi,
         success: function(data) {
-            nextImg.attr('src', data.path + data.file);
+            if(data.path && data.file) {
+                nextImg.attr('src', data.path + data.file);
+                nextImg.fadeIn(fadeTime);
+            }
             currentImg.fadeOut(fadeTime);
-            nextImg.fadeIn(fadeTime);
+            
 
             setTimeout(process, waitTime)
         }

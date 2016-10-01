@@ -6,6 +6,7 @@ var waitTime = 5000;
 
 /*********************************/
 
+var selectorPrefix = '#images img#image';
 var current = 0;
 
 $(document).ready(function(){
@@ -15,14 +16,14 @@ $(document).ready(function(){
 
 function process() {
     //currently displayed container
-    var currentImg = $('#images img#image' + current);
+    var currentImg = $(selectorPrefix + current);
     
     //set current to next container
     if(current < 2) current++;
     else current = 0;   
 
     //next container to be displayed
-    var nextImg = $('#images img#image' + current);
+    var nextImg = $(selectorPrefix + current);
 
     $.ajax({
         url: imageApi,

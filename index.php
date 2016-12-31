@@ -8,6 +8,9 @@
 	<script type="text/javascript" src="global.js"></script>
 </head>
 <body>
+<?php if($_GET['logo'] == 'true') { ?>
+<img id="logo" src="logo.png">
+<?php } ?>
 
 <div id="images">
     <img id="image0">

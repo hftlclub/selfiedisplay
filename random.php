@@ -3,9 +3,15 @@ $dir = 'selfies/';
 chdir($dir);
 $images = glob('*.jpg');
 
+$bannerImage = "banner.jpg";
+
+array_push($images, $bannerImage);
+
+
+$randomFile = $images[array_rand($images)];
 $out = array(
-        'file' => $images[array_rand($images)],
-        'path' => $dir
+        'file' => $randomFile,
+        'path' => $randomFile == $bannerImage ? "/" : $dir
 );
 
 //send JSON
